@@ -1,6 +1,6 @@
 
 function startTimer() {
-    let eventDate = new Date("2023-11-04T19:58:00");
+    let eventDate = new Date("2023-11-06T13:38:00");
     let currentDate = new Date();
     let timeLeft = eventDate - currentDate;
     if (timeLeft >= 0) {
@@ -10,11 +10,11 @@ function startTimer() {
     document.getElementById("timer").innerHTML = hh.toString().padStart(2, '0') + ':' + mm.toString().padStart(2, '0') + ':' + ss.toString().padStart(2, '0')
     } else {
         alert('Вы победили в конкурсе!')
-        clearInterval(timeLeft)
+        clearInterval(firstTimer)
         const link = document.getElementById("linkNetology");
     link.click();
     }
 }
 
-setInterval(startTimer, 1000)
+let firstTimer = setInterval(startTimer, 1000)
 startTimer()

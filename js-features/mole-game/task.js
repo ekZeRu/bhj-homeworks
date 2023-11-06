@@ -21,11 +21,10 @@ function getHole( index ) {
   dead.innerHTML = killed
   lost.innerHTML = missed
   if (killed === 10 && missed < 5) {
-    ('Игрок победил')
+    alert('Игрок победил')
     killed = 0
     missed = 0
   } if (missed === 5 && killed < 10) {
-  
     alert('Игрок проиграл')
     killed = 0
     missed = 0
