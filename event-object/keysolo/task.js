@@ -17,15 +17,15 @@ class Game {
   }
 
   registerEvents() {
-    document.addEventListener("keypress", (event) => {
+    document.addEventListener('keypress', (event) => {
       if (
         event.key.toLowerCase() === this.currentSymbol.textContent.toLowerCase()
       ) {
-        this.success();
+        this.success()
       } else {
-        this.fail();
+        this.fail()
       }
-    });
+    })
     /*
       TODO:
       Написать обработчик события, который откликается
